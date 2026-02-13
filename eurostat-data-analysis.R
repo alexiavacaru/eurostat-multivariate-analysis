@@ -23,9 +23,9 @@ library(cluster)
 
 # 1. Data Ingestion: Importing data from multiple formats (CSV, TXT, XLSX)
 # Handling Eurostat-specific null strings like ":" or empty spaces
-date1 <- read.csv(here("Tema1_Eurostat.csv"), header=T, sep="'", na.strings=c("NA",":",""))
-date2 <- read.table(here("Tema1_Eurostat.txt"), sep="\t", header=T, dec=",", na.strings=c("NA",":",""))
-date3 <- read.xlsx(here("Tema1_Eurostat.xlsx"), colNames = TRUE, na.strings = c("NA", ":", ""))
+date1 <- read.csv(here("Date_Eurostat.csv"), header=T, sep="'", na.strings=c("NA",":",""))
+date2 <- read.table(here("Date_Eurostat.txt"), sep="\t", header=T, dec=",", na.strings=c("NA",":",""))
+date3 <- read.xlsx(here("Date_Eurostat.xlsx"), colNames = TRUE, na.strings = c("NA", ":", ""))
 
 # 2. Data Cleaning: Setting row identifiers and removing non-numeric columns
 # We use the 'Cod' column for indexing and omit rows with missing values to ensure quality
